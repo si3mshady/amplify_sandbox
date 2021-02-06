@@ -1,5 +1,10 @@
-
+import Amplify from 'aws-amplify'
+import config from './aws-exports'
+import {withAuthenticator} from '@aws-amplify/ui-re ct'
+import React from 'react'
 import './App.css';
+
+Amplify.configure(config)
 
 function App() {
   return (
@@ -7,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);
